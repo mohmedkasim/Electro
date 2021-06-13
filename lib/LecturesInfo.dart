@@ -65,11 +65,11 @@ class CardInfo extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
 
                   children: [
-                    Text('اسم المقرر'),
-                    Text('استاذ المقرر'),
-                    Text('وقت المحاضرة'),
-                    Text('الحالة'),
-                    Text('رقم الهاتف')
+                    Text('اسم المقرر',style: TextStyle(fontWeight: FontWeight.bold),),
+                    Text('استاذ المقرر',style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text('وقت المحاضرة',style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text('الحالة',style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text('رقم الهاتف',style: TextStyle(fontWeight: FontWeight.bold))
                   ],
                 ),
                 Column(
@@ -91,17 +91,19 @@ class CardInfo extends StatelessWidget {
                     Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Colors.blueGrey[700]
+                          color: Colors.blueGrey[700],
                         ),
+                        height: 30,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.only(left:15.0,right:15.0),
                           child: Row(
-
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
 
-                              Text(teacherNumber,style: TextStyle(color:Colors.white),),
-                              SizedBox(width: 5,),
-                              Icon(Icons.phone,color: Colors.white,size: 11,),
+                              Text(teacherNumber,style: TextStyle(color:Colors.white,fontSize: 11),),
+                              Icon(Icons.phone,color: Colors.white,size: 15,)
+
                             ],
                           ),
                         ))
