@@ -1,3 +1,4 @@
+import 'package:electure_project/LecturesInfo.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -53,87 +54,92 @@ class _HomeScreenState extends State<HomeScreen> {
             textDirection: TextDirection.rtl,
             child: Padding(
               padding: const EdgeInsets.only(right:15.0,left: 15.0),
-              child: Container(
+              child: InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>LecturesInfo()));
+                },
+                child: Container(
 
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.white,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.white,
 
-                ),
-                child: Padding(
-                  padding:  EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      Text('المحاضرات'),
-                      Padding(
-                        padding: const EdgeInsets.only(top:10.0, bottom: 10.0),
-                        child: Divider(
-                          indent: 15,
-                          endIndent: 15,
-                          color: Colors.grey,
+                  ),
+                  child: Padding(
+                    padding:  EdgeInsets.all(10.0),
+                    child: Column(
+                      children: [
+                        Text('المحاضرات'),
+                        Padding(
+                          padding: const EdgeInsets.only(top:10.0, bottom: 10.0),
+                          child: Divider(
+                            indent: 15,
+                            endIndent: 15,
+                            color: Colors.grey,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Column(
+                        Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
 
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: primaryColor
-                                  ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text('00',style: TextStyle(color: Colors.white),),
-                                ),
-                                ),
-                                SizedBox(width: 10,),
-                                Text('تم الحضور')
-                              ],
-                            ),
-                            SizedBox(
-                              height: 15
-                            ),
-                            Row(
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       color: primaryColor
-                                  ),
+                                    ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: Text('00',style: TextStyle(color: Colors.white),),
                                   ),
-                                ),
-                                SizedBox(width: 10,),
-                                Text('غياب')
-                              ],
-                            ),
-                            SizedBox(height: 15),
-                            Row(
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: primaryColor
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text('00',style: TextStyle(color: Colors.white),),
+                                  SizedBox(width: 10,),
+                                  Text('تم الحضور')
+                                ],
+                              ),
+                              SizedBox(
+                                height: 15
+                              ),
+                              Row(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: primaryColor
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text('00',style: TextStyle(color: Colors.white),),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(width: 10,),
-                                Text('لم يحدد وقت')
-                              ],
-                            )
-                          ],
-                        ),
-                      )
-                    ],
+                                  SizedBox(width: 10,),
+                                  Text('غياب')
+                                ],
+                              ),
+                              SizedBox(height: 15),
+                              Row(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: primaryColor
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text('00',style: TextStyle(color: Colors.white),),
+                                    ),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Text('لم يحدد وقت')
+                                ],
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
